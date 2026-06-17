@@ -57,8 +57,7 @@ def build_summary_sections(inputs: dict[str, Any]) -> list[dict[str, str]]:
             "body": (
                 f"Selected dataset: {selected['accession']} - {selected['title']}. "
                 f"This is a {selected['disease']} model using {selected['cell_type']}. "
-                "It is not MERRF-specific; it is used as a related mitochondrial cardiomyopathy model "
-                "because it combines human iPSC-cardiomyocytes, mitochondrial disease biology, cardiac dysfunction, "
+                "It combines human iPSC-cardiomyocytes, frataxin-deficiency disease biology, cardiac dysfunction, "
                 "processed RNA-seq counts, and paired disease/control metadata."
             ),
         },
@@ -95,19 +94,17 @@ def build_summary_sections(inputs: dict[str, Any]) -> list[dict[str, str]]:
         {
             "section": "Limitations",
             "body": (
-                "The selected dataset models Friedreich ataxia/frataxin deficiency, not MERRF or MT-TK m.8344A>G. "
                 "The exploratory paired expression analysis is limited by the effective paired sample size of "
                 "three patient pairs and the Python implementation is not a full DESeq2 negative-binomial model. "
                 "Mitochondrial pathway summaries are descriptive selected-gene summaries, not formal enrichment tests."
             ),
         },
         {
-            "section": "PhD relevance",
+            "section": "Project scope",
             "body": (
-                "The repository focuses on computational support skills relevant to MERRF-associated "
-                "cardiomyopathy work: public dataset screening, clear disease-model framing, biomedical metadata "
-                "curation, RNA-seq count QC, paired expression analysis, mitochondrial gene-set interpretation, "
-                "and reproducible reporting for iPSC/omics workflows."
+                "The repository focuses on public dataset screening, biomedical metadata curation, RNA-seq count QC, "
+                "paired expression analysis, mitochondrial gene-set interpretation, and reproducible reporting for "
+                "a Friedreich ataxia iPSC-cardiomyocyte model."
             ),
         },
     ]

@@ -4,13 +4,13 @@ table,reports/tables/differential_expression_summary.csv,1419
 table,reports/tables/expression_qc_summary.csv,719
 table,reports/tables/final_artifact_inventory.csv,1313
 table,reports/tables/mitochondrial_gene_heatmap_matrix.csv,14747
-table,reports/tables/mitochondrial_gene_results.csv,12994
+table,reports/tables/mitochondrial_gene_results.csv,12977
 table,reports/tables/mitochondrial_pathway_score_tests.csv,3530
 table,reports/tables/mitochondrial_pathway_scores.csv,20180
 table,reports/tables/mitochondrial_pathway_summary.csv,1760
 table,reports/tables/pathway_enrichment_results.csv,2860
 table,reports/tables/pca_coordinates.csv,1265
-table,reports/tables/project_summary_table.csv,2359
+table,reports/tables/project_summary_table.csv,2091
 table,reports/tables/sample_library_sizes.csv,1026
 table,reports/tables/sample_summary.csv,197
 table,reports/tables/top_differential_expression_genes.csv,10820

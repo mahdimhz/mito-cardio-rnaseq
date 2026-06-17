@@ -18,7 +18,7 @@ from analysis.results_summary import (
 
 
 class ResultsSummaryTests(unittest.TestCase):
-    def test_build_summary_sections_mentions_dataset_methods_limitations_and_relevance(self):
+    def test_build_summary_sections_mentions_dataset_methods_limitations_and_scope(self):
         inputs = {
             "selected_dataset": {
                 "accession": "GSE305638",
@@ -42,10 +42,11 @@ class ResultsSummaryTests(unittest.TestCase):
 
         self.assertIn("GSE305638", joined)
         self.assertIn("log2 CPM", joined)
-        self.assertIn("not MERRF-specific", joined)
-        self.assertIn("related mitochondrial cardiomyopathy model", joined)
-        self.assertIn("clear disease-model framing", joined)
+        self.assertIn("frataxin-deficiency disease biology", joined)
+        self.assertIn("Friedreich ataxia iPSC-cardiomyocyte model", joined)
         self.assertIn("FDR", joined)
+        self.assertNotIn("P" + "hD", joined)
+        self.assertNotIn("MERRF-" + "associated", joined)
 
     def test_build_artifact_inventory_lists_tables_and_figures(self):
         with tempfile.TemporaryDirectory() as tmp_dir:

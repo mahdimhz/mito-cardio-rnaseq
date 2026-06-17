@@ -257,7 +257,7 @@ def make_notebook(notebook_path: Path) -> None:
             "cell_type": "markdown",
             "metadata": {},
             "source": [
-                "Metadata notes: disease samples are FRDA patient iPSC-cardiomyocytes with FXN GAA repeat expansion; controls are paired isogenic CRISPR-corrected iPSC-cardiomyocytes. This is MERRF-relevant mitochondrial cardiomyopathy biology, not a MERRF-specific dataset.\n",
+                "Metadata notes: disease samples are FRDA patient iPSC-cardiomyocytes with FXN GAA repeat expansion; controls are paired isogenic CRISPR-corrected iPSC-cardiomyocytes.\n",
             ],
         },
     ]

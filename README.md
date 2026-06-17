@@ -1,6 +1,6 @@
-# Mitochondrial Disease Omics Analysis for MERRF-Relevant Cardiomyopathy Mechanisms
+# Frataxin Deficiency iPSC-Cardiomyocyte RNA-seq Analysis
 
-A focused RNA-seq workflow for a related mitochondrial cardiomyopathy model, built from public human iPSC-cardiomyocyte data and reported with cautious MERRF framing.
+A reproducible RNA-seq workflow for public human iPSC-derived cardiomyocytes comparing Friedreich ataxia disease lines with isogenic corrected controls.
 
 ## At a Glance
 
@@ -13,29 +13,27 @@ A focused RNA-seq workflow for a related mitochondrial cardiomyopathy model, bui
 | Samples | 18 total: 9 disease, 9 control |
 | Design | 3 paired patient/control lines with 3 replicates per condition |
 | Data type | Processed RNA-seq count matrix from GEO |
-| Analysis | Dataset screening, metadata curation, QC, exploratory paired expression analysis, mitochondrial pathway scoring |
-| Scope | Related mitochondrial cardiomyopathy model, not direct MERRF data |
+| Analysis | Metadata curation, expression QC, exploratory paired expression analysis, mitochondrial gene and pathway summaries |
 
-## Why This Dataset
+## Dataset
 
-MERRF is commonly associated with the mitochondrial `MT-TK` m.8344A>G variant and impaired mitochondrial translation, oxidative phosphorylation, ATP production, and tissue energy balance. The PhD topic is centered on MERRF cardiomyopathy, but public transcriptomic datasets that are direct MERRF, iPSC-cardiomyocyte based, processed, and clearly paired are limited.
-
-`GSE305638` was selected because it provides a usable cardiac mitochondrial disease model:
+`GSE305638` was selected because it provides a compact human cardiac disease model with processed RNA-seq data:
 
 | Criterion | `GSE305638` |
 |---|---|
 | Human cells | Yes |
-| iPSC-cardiomyocytes | Yes |
-| Mitochondrial disease biology | Yes, FRDA/frataxin deficiency |
-| Paired disease/control structure | Yes, patient lines with isogenic corrected controls |
-| Processed RNA-seq counts | Yes |
-| Direct MERRF / `MT-TK` m.8344A>G | No |
+| iPSC-derived cardiomyocytes | Yes |
+| Disease biology | Friedreich ataxia / frataxin deficiency |
+| Control design | Isogenic corrected controls |
+| Sample count | 18 samples |
+| Paired structure | 3 patient/control line pairs |
+| Processed count matrix | Yes |
 
-The dataset is not MERRF-specific. It is used as a related mitochondrial cardiomyopathy model, not as evidence specific to MERRF.
+The analysis uses the processed gene-count table and GEO sample metadata. No raw FASTQ files are required.
 
-The dataset registry was re-checked for direct MERRF alternatives. `GSE106601` is a direct MERRF/m.8344A>G dataset with processed supplementary files, but GEO metadata indicate mixed skeletal tissue and immortalized cell-line samples rather than iPSC-cardiomyocytes. `GSE142745` and related subseries include m.8344A>G context, but they are single-cell mitochondrial genotyping/clonal-variation datasets rather than cardiac iPSC disease models. These datasets are retained as secondary registry context.
+Other mitochondrial-disease datasets were screened during dataset selection. Direct MERRF-related records such as `GSE106601` and m.8344A>G-related records such as `GSE142745` were retained in the registry but were not used for the main analysis because they did not provide the same cardiac iPSC disease/control structure as `GSE305638`.
 
-## Workflow Overview
+## Workflow
 
 | Stage | Output |
 |---|---|
@@ -53,6 +51,7 @@ The dataset registry was re-checked for direct MERRF alternatives. `GSE106601` i
 | Type | Path |
 |---|---|
 | Dataset registry | `references/dataset_registry.csv` |
+| Source register | `references/source_register.csv` |
 | Clean metadata | `data/processed/metadata_clean.csv` |
 | Clean expression matrix | `data/processed/expression_clean.csv` |
 | Expression QC summary | `reports/tables/expression_qc_summary.csv` |
@@ -88,7 +87,7 @@ The exploratory paired expression analysis tested 15,100 expressed genes after f
 
 Ranked exploratory signals included `MEG3`, `CBLN2`, `CNTN6`, and `CHCHD2` among disease-up genes, and `TRH`, `DRD1`, `SFRP5`, and `CACNA1G` among disease-down genes. These are ranked signals from a small paired analysis, not genome-wide findings after FDR correction.
 
-## Mitochondrial Interpretation
+## Mitochondrial Gene and Pathway Analysis
 
 The mitochondrial reference list contains 41 genes spanning mtDNA-encoded OXPHOS genes, respiratory-chain complexes, ATP synthase, mitochondrial translation and mtDNA maintenance, fusion/fission, mitophagy, oxidative stress / ROS, and mitochondrial biogenesis.
 
@@ -106,7 +105,7 @@ Descriptively, mtDNA-encoded OXPHOS genes trended lower in disease samples. The 
 
 ![Mitochondrial gene heatmap](reports/figures/mitochondrial_gene_heatmap.png)
 
-Sample-level pathway scores were computed as mean z-scored expression of available genes in each mitochondrial category. All 11 categories had lower mean disease scores than paired corrected controls. The largest mean differences were seen for mtDNA-encoded OXPHOS genes, mitochondrial biogenesis, and respiratory-chain categories. No mitochondrial pathway-score comparison is interpreted as a formal disease mechanism, and no score-level result is treated as confirmatory given the three-pair design.
+Sample-level pathway scores were computed as mean z-scored expression of available genes in each mitochondrial category. All 11 categories had lower mean disease scores than paired corrected controls. The largest mean differences were seen for mtDNA-encoded OXPHOS genes, mitochondrial biogenesis, and respiratory-chain categories. These score-level results are descriptive and are not treated as confirmatory given the three-pair design.
 
 ![Mitochondrial pathway scores](reports/figures/mitochondrial_pathway_scores_paired.png)
 
@@ -116,23 +115,20 @@ Local mitochondrial-category enrichment used nominal `p < 0.05` genes against th
 
 ## Limitations
 
-`GSE305638` is an FRDA/frataxin-deficiency model, not a MERRF patient dataset and not an `MT-TK` m.8344A>G cardiomyocyte dataset.
-
 The effective paired sample size is 3 patient/control lines. Replicates were averaged within each patient/group before paired testing. This preserves the patient-pair structure, but it does not replace a larger biological cohort.
 
 The paired expression analysis uses log2 CPM values and paired t-tests in Python. It is not a DESeq2, edgeR, or limma/voom model. The results are therefore reported as exploratory.
 
-The mitochondrial pathway scores and local enrichment tables summarize selected gene categories. They do not establish disease mechanism, treatment response, or diagnostic claims specific to MERRF.
+The mitochondrial pathway scores and local enrichment tables summarize selected gene categories. They do not establish disease mechanism, treatment response, or diagnostic claims.
 
 ## Data and References
 
 | Resource | Role in this project |
 |---|---|
 | [GSE305638](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE305638) | Primary iPSC-cardiomyocyte RNA-seq dataset used for analysis |
-| [GSE106601](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE106601) | Direct MERRF-related registry candidate; not selected as the primary dataset |
-| [GSE142745](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE142745) | m.8344A>G-related registry context; not selected as the primary dataset |
 | [Frataxin deficiency drives cardiac dysfunction and transcriptional dysregulation in Friedreich ataxia iPSC model](https://www.biorxiv.org/content/10.1101/2025.08.20.671405v1) | Preprint associated with the selected FRDA iPSC-cardiomyocyte dataset |
-| [tRNA modification landscape selectively controls mitochondrial translation efficiency in MERRF](https://pubmed.ncbi.nlm.nih.gov/30262910/) | MERRF / m.8344A>G reference associated with the registry review |
+| [GSE106601](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE106601) | Mitochondrial-disease registry candidate; not used for the main analysis |
+| [GSE142745](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE142745) | m.8344A>G-related registry context; not used for the main analysis |
 
 ## Reproduce the Analysis
 
@@ -140,7 +136,7 @@ Create the environment:
 
 ```bash
 conda env create -f environment.yml
-conda activate merrf-omics
+conda activate frataxin-cardio-rnaseq
 ```
 
 Run tests:
@@ -169,7 +165,7 @@ The repository uses lightweight GEO files and processed count tables. It does no
 ## Repository Structure
 
 ~~~text
-merrf-mitochondrial-disease-omics-analysis/
+frataxin-cardiomyocyte-rnaseq/
 |-- data/
 |   |-- raw/                 # GEO series matrix and processed count table
 |   |-- interim/             # GEO/NCBI metadata files
@@ -187,7 +183,3 @@ merrf-mitochondrial-disease-omics-analysis/
 |-- requirements.txt
 +-- README.md
 ~~~
-
-## CV Bullet
-
-Built a mitochondrial-disease omics workflow using public human iPSC-cardiomyocyte RNA-seq data, including GEO dataset screening, metadata curation, RNA-seq QC, exploratory paired expression analysis, mitochondrial pathway scoring, local enrichment, and cautious reporting for MERRF-relevant cardiomyopathy mechanisms.

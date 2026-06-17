@@ -220,7 +220,7 @@ def write_registry(rows: list[dict[str, str]], output_path: Path) -> None:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Search NCBI GEO/GDS with MERRF-relevant queries and draft dataset_registry.csv."
+        description="Search NCBI GEO/GDS with mitochondrial-disease and cardiomyocyte queries and draft dataset_registry.csv."
     )
     parser.add_argument(
         "--output",

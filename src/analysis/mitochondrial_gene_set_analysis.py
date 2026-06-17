@@ -14,7 +14,7 @@ import pandas as pd
 
 
 GENE_SETS = [
-    ("MT-TK", "mitochondrial translation / mtDNA maintenance", "MERRF-associated mitochondrial tRNA lysine gene."),
+    ("MT-TK", "mitochondrial translation / mtDNA maintenance", "Mitochondrial tRNA lysine gene."),
     ("MT-ND1", "mtDNA-encoded OXPHOS genes", "mtDNA-encoded complex I subunit."),
     ("MT-ND2", "mtDNA-encoded OXPHOS genes", "mtDNA-encoded complex I subunit."),
     ("MT-ND3", "mtDNA-encoded OXPHOS genes", "mtDNA-encoded complex I subunit."),

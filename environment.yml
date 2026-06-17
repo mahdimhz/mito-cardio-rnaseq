@@ -1,4 +1,4 @@
-name: merrf-omics
+name: frataxin-cardio-rnaseq
 channels:
   - conda-forge
 dependencies:
@@ -6,4 +6,3 @@ dependencies:
   - pip
   - pip:
       - -r requirements.txt
-
