@@ -1,0 +1,10 @@
+metric,value,notes
+gene_count,59743,Rows in aligned expression matrix.
+sample_count,18,Samples aligned with cleaned metadata.
+missing_value_count,0,Missing values in sample count columns.
+duplicate_gene_id_count,0,Duplicate Ensembl gene IDs.
+duplicate_gene_symbol_count,3715,Duplicate gene symbols; gene_id remains the primary key.
+negative_value_count,0,Negative count values should be zero for count data.
+matrix_type,raw_or_estimated_counts,GEO describes the supplementary TSV as raw gene counts; decimal values indicate imported/estimated counts.
+pca_pc1_variance_ratio,0.353057,"PCA on log2(count + 1), variable genes only."
+pca_pc2_variance_ratio,0.091231,"PCA on log2(count + 1), variable genes only."

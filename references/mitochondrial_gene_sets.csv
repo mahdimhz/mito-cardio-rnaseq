@@ -1,0 +1,42 @@
+gene_symbol,category,notes
+MT-TK,mitochondrial translation / mtDNA maintenance,MERRF-associated mitochondrial tRNA lysine gene.
+MT-ND1,mtDNA-encoded OXPHOS genes,mtDNA-encoded complex I subunit.
+MT-ND2,mtDNA-encoded OXPHOS genes,mtDNA-encoded complex I subunit.
+MT-ND3,mtDNA-encoded OXPHOS genes,mtDNA-encoded complex I subunit.
+MT-ND4,mtDNA-encoded OXPHOS genes,mtDNA-encoded complex I subunit.
+MT-ND4L,mtDNA-encoded OXPHOS genes,mtDNA-encoded complex I subunit.
+MT-ND5,mtDNA-encoded OXPHOS genes,mtDNA-encoded complex I subunit.
+MT-ND6,mtDNA-encoded OXPHOS genes,mtDNA-encoded complex I subunit.
+MT-CO1,mtDNA-encoded OXPHOS genes,mtDNA-encoded complex IV subunit.
+MT-CO2,mtDNA-encoded OXPHOS genes,mtDNA-encoded complex IV subunit.
+MT-CO3,mtDNA-encoded OXPHOS genes,mtDNA-encoded complex IV subunit.
+MT-CYB,mtDNA-encoded OXPHOS genes,mtDNA-encoded complex III subunit.
+MT-ATP6,mtDNA-encoded OXPHOS genes,mtDNA-encoded ATP synthase subunit.
+MT-ATP8,mtDNA-encoded OXPHOS genes,mtDNA-encoded ATP synthase subunit.
+NDUFA1,respiratory chain complex I,Nuclear-encoded complex I subunit.
+NDUFB8,respiratory chain complex I,Nuclear-encoded complex I subunit.
+SDHA,respiratory chain complex II,Nuclear-encoded complex II subunit.
+UQCRC2,respiratory chain complex III,Nuclear-encoded complex III subunit.
+COX4I1,respiratory chain complex IV,Nuclear-encoded complex IV subunit.
+ATP5F1A,ATP synthase,Nuclear-encoded ATP synthase subunit.
+TFAM,mitochondrial translation / mtDNA maintenance,mtDNA packaging and transcription factor.
+POLG,mitochondrial translation / mtDNA maintenance,mtDNA polymerase catalytic subunit.
+POLG2,mitochondrial translation / mtDNA maintenance,mtDNA polymerase accessory subunit.
+TWNK,mitochondrial translation / mtDNA maintenance,mtDNA helicase.
+MFN1,fusion/fission,Mitochondrial fusion.
+MFN2,fusion/fission,Mitochondrial fusion.
+OPA1,fusion/fission,Mitochondrial inner-membrane fusion/cristae structure.
+DNM1L,fusion/fission,Mitochondrial fission.
+FIS1,fusion/fission,Mitochondrial fission adaptor.
+MFF,fusion/fission,Mitochondrial fission factor.
+PINK1,mitophagy,Mitophagy initiation.
+PRKN,mitophagy,Parkin-mediated mitophagy.
+BNIP3,mitophagy,Hypoxia-associated mitophagy.
+BNIP3L,mitophagy,NIX-mediated mitophagy.
+SOD2,oxidative stress / ROS,Mitochondrial superoxide dismutase.
+GPX1,oxidative stress / ROS,Glutathione peroxidase.
+CAT,oxidative stress / ROS,Catalase.
+PRDX3,oxidative stress / ROS,Mitochondrial peroxiredoxin.
+PPARGC1A,mitochondrial biogenesis,PGC-1 alpha biogenesis regulator.
+NRF1,mitochondrial biogenesis,Nuclear respiratory factor 1.
+ESRRA,mitochondrial biogenesis,ERR alpha mitochondrial transcriptional regulator.

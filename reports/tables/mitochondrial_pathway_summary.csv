@@ -1,0 +1,12 @@
+category,gene_count,tested_gene_count,mean_log2_fold_change,median_log2_fold_change,min_p_value,min_padj,direction,notes
+ATP synthase,1,1,-0.057923,-0.057923,0.0216247,0.670987,down_in_disease,Pathway direction is descriptive; no enrichment test is implied.
+fusion/fission,6,6,0.050431,0.013719,0.0748572,0.670987,up_in_disease,Pathway direction is descriptive; no enrichment test is implied.
+mitochondrial biogenesis,3,3,-0.224961,-0.219914,0.0547432,0.670987,down_in_disease,Pathway direction is descriptive; no enrichment test is implied.
+mitochondrial translation / mtDNA maintenance,5,4,0.108386,0.119374,0.0116053,0.670987,up_in_disease,Pathway direction is descriptive; no enrichment test is implied.
+mitophagy,4,4,0.013150,0.003078,0.194179,0.670987,mixed_or_near_zero,Pathway direction is descriptive; no enrichment test is implied.
+mtDNA-encoded OXPHOS genes,13,13,-0.342929,-0.305824,0.029651,0.670987,down_in_disease,Pathway direction is descriptive; no enrichment test is implied.
+oxidative stress / ROS,4,4,0.115947,0.083015,0.247163,0.672101,up_in_disease,Pathway direction is descriptive; no enrichment test is implied.
+respiratory chain complex I,2,2,-0.204172,-0.204172,0.14224,0.670987,down_in_disease,Pathway direction is descriptive; no enrichment test is implied.
+respiratory chain complex II,1,1,-0.021473,-0.021473,0.668648,0.838134,mixed_or_near_zero,Pathway direction is descriptive; no enrichment test is implied.
+respiratory chain complex III,1,1,-0.045961,-0.045961,0.569525,0.788324,mixed_or_near_zero,Pathway direction is descriptive; no enrichment test is implied.
+respiratory chain complex IV,1,1,-0.138852,-0.138852,0.344805,0.69125,down_in_disease,Pathway direction is descriptive; no enrichment test is implied.
